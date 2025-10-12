@@ -1,0 +1,30 @@
+{
+  "name": "djawascript",
+  "displayName": "DjawaScript Language Support",
+  "description": "Syntax highlighting for the DjawaScript Language",
+  "version": "0.1.0",
+  "publisher": "gegesteorngoding",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gegesteorngoding/djawa-script.git"
+  },
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "djawascript",
+      "aliases": ["DjawaScript", "djawascript"],
+      "extensions": [".jawa"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "djawascript",
+      "scopeName": "source.jawa",
+      "path": "./syntaxes/djawascript.tmLanguage.json"
+    }]
+  }
+}

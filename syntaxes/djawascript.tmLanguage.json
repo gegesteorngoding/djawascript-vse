@@ -1,0 +1,129 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "JawaScript",
+  "scopeName": "source.jawa",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#entities"
+    },
+    {
+      "include": "#support"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.jawascript",
+          "match": "//.*"
+        },
+        {
+          "name": "comment.block.jawascript",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.jawascript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.jawascript",
+              "match": "\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.jawascript",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.jawascript",
+              "match": "\\."
+            }
+          ]
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "entity.name.function",
+          "match": "\\b(luwihGedhePodo|luwihCilikPodo|tambahKaro|kurangKaro|pingKaro|bagiKaro|sisoKaro|gakPlek|gakPodo|plek|podo|lan|utawa|utowoYenKosong|lanbit|utawabit|xor|walik|geserKiwo|geserTengen|geserTengenNol|tambah|kurang|ping|bagi|siso|yoiku|luwihGedhe|luwihCilik|ora|ikuJinise|tipene|hapusen|kosongno|anyar|lakoni|asilno|entuk|pasang|iku\\s+ilang|iku\\s+ono|ta|lek\\s+gak|wujudno)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.jawascript",
+          "match": "\\b(selagi|kanggo|lek misale|lek|liyane|balekno|lanjutno|nyekel|cobak|mandek|pungkasan|uncalen|enteni|ing|soko|debug|terus|mbari|pilih|kalo|yowes|jupukno|metokno|biasane|dadi|kabeh)\\b"
+        },
+        {
+          "name": "storage.type.jawascript",
+          "match": "\\b(iki iku|jarno|gawe|kelas)\\b"
+        },
+        {
+          "name": "storage.modifier.jawascript",
+          "match": "\\b(tenangan|tetep|turunan soko)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.jawascript",
+          "match": "\\b(tenan|gak|kosong|oraDidefinisikan|gudukAngka|tanpaBates|iki|globalIki|induk)\\b"
+        }
+      ]
+    },
+    "entities": {
+      "patterns": [
+        {
+          "name": "entity.name.function.jawascript",
+          "match": "\\b(gawe)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
+        },
+        {
+          "name": "entity.name.type.class.jawascript",
+          "match": "\\b(kelas)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
+        }
+      ]
+    },
+    "support": {
+      "patterns": [
+        {
+          "name": "support.function.jawascript",
+          "match": "\\b(takon|cetakno|ikiGudukAngka|jadiknoInt|jadiknoFloat|ikiTerbatas|uraiURI|enkodeURI|uraiBagianURI|enkodeBagianURI|setWaktuInterval|hapusWaktuInterval|setWaktuTunda|hapusWaktuTunda|tuple)\\b"
+        },
+        {
+          "name": "support.class.jawascript",
+          "match": "\\b(Matematika|Tanggalan|DataJSON|Daftar|Obyek|Teks|Angka|Logika|Simbol|Peta|Kumpulan|Janji|Kesalahan|PolaTeks|Perantara|Pantulan|Kosong|OraDidefinisikan|Sembarang|OraOno)\\b"
+        },
+        {
+          "name": "support.variable.jawascript",
+          "match": "\\b(Mtk|Obyek|Daftar|Tanggalan|DataJSON|Pantulan|cetakno)\\.[a-zA-Z_][a-zA-Z0-9_]*"
+        }
+      ]
+    }
+  }
+}
