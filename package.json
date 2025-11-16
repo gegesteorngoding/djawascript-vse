@@ -1,9 +1,11 @@
 {
   "name": "djawascript",
-  "displayName": "DjawaScript Language Support",
+  "license": "MIT",
+  "displayName": "DjawaScript for VS Code",
   "description": "Syntax highlighting for the DjawaScript Language",
-  "version": "0.1.0",
-  "publisher": "gegesteorngoding",
+  "version": "0.2.1",
+  "publisher": "FatihFaisalDev",
+  "icon": "jawascript-icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/gegesteorngoding/djawa-script.git"
